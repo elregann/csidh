@@ -1,0 +1,24 @@
+name: csidh_dart
+description: >
+  Pure-Dart implementation of CSIDH (Commutative Supersingular Isogeny
+  Diffie-Hellman), a post-quantum non-interactive key exchange protocol.
+
+  Reference: Castryck, Lange, Martindale, Panny, Renes —
+  "CSIDH: An Efficient Post-Quantum Commutative Group Action"
+  ASIACRYPT 2018. https://eprint.iacr.org/2018/383
+
+  This package implements the proof-of-concept variable-time version
+  described in the original paper (Algorithm 1 & 2), using Dart's
+  native BigInt for 512-bit field arithmetic (correctness-first).
+  Constant-time hardening (SIMBA / dummy isogenies) is planned as a
+  separate layer once the math is verified.
+
+version: 0.1.0
+homepage: https://github.com/elregann/csidh_dart
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dev_dependencies:
+  test: ^1.24.0
+  lints: ^3.0.0
